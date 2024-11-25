@@ -26,7 +26,7 @@
             return;
         }
 
-        const tomatoCount = 20;
+        const tomatoCount = 10;
         const maxtomatoesize = 50;
         const mintomatoesize = 20;
 
@@ -133,20 +133,27 @@
 </main>
   
 <style>
+    :global(html), :global(body) {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     main {
       font-family: 'Arial', sans-serif;
       color: #333;
     }
   
     .hero {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, #ff6b6b, #feca57);
-      color: white;
-      overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6rem 2rem;
+        background: linear-gradient(135deg, #ff6b6b, #feca57);
+        color: white;
+        overflow: hidden;
     }
   
     .falling-tomatoes {
@@ -236,10 +243,10 @@
     }
   
     .feature-item {
-      background-color: #f8f9fa;
+      background-color: #e9e9e9;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
   
