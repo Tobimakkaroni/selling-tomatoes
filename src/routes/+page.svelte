@@ -2,6 +2,8 @@
     import { onMount, tick } from 'svelte';
     import { fade, fly } from 'svelte/transition';
     import Carousel from '$lib/Carousel.svelte';
+  import Navbar from '$lib/Navbar.svelte';
+  import Footer from '$lib/Footer.svelte';
 
     const images = [
       "/images/tomato-icon.png",
@@ -68,6 +70,8 @@
 </script>
   
 <main>
+  <Navbar />
+
     {#if showHero}
       <section class="hero" in:fade={{ duration: 1000 }}>
         <div class="falling-tomatoes"></div>
@@ -139,6 +143,8 @@
         <p class="cta-message">Create your custom tomato message today!</p>
         <a href="/customize" class="cta-button">Start Customizing</a>
       </section>
+
+      <Footer />
 </main>
   
 <style lang="postcss">
@@ -186,7 +192,7 @@
             transform: translateY(-100%);
         }
         to {
-            transform: translateY(100vh);
+            transform: translateY(160vh); /* without this vh > 160, the animations is cut of */
         }
     }
   
