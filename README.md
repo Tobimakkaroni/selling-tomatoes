@@ -1,38 +1,85 @@
-# sv
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
 ```
+selling-tomatoes
+├─ .git
+│  ├─ config
+│  ├─ description
+│  ├─ FETCH_HEAD
+│  ├─ HEAD
+│  ├─ hooks
+│  │  ├─ applypatch-msg.sample
+│  │  ├─ commit-msg.sample
+│  │  ├─ fsmonitor-watchman.sample
+│  │  ├─ post-update.sample
+│  │  ├─ pre-applypatch.sample
+│  │  ├─ pre-commit.sample
+│  │  ├─ pre-merge-commit.sample
+│  │  ├─ pre-push.sample
+│  │  ├─ pre-rebase.sample
+│  │  ├─ pre-receive.sample
+│  │  ├─ prepare-commit-msg.sample
+│  │  ├─ push-to-checkout.sample
+│  │  ├─ sendemail-validate.sample
+│  │  └─ update.sample
+│  ├─ index
+│  ├─ info
+│  │  └─ exclude
+│  ├─ logs
+│  │  ├─ HEAD
+│  │  └─ refs
+│  │     ├─ heads
+│  │     │  └─ main
+│  │     └─ remotes
+│  │        └─ origin
+│  │           └─ HEAD
+│  ├─ objects
+│  │  ├─ info
+│  │  └─ pack
+│  │     ├─ pack-59422d155845f4e3ca9199ef3c16619e0e862c72.idx
+│  │     ├─ pack-59422d155845f4e3ca9199ef3c16619e0e862c72.pack
+│  │     └─ pack-59422d155845f4e3ca9199ef3c16619e0e862c72.rev
+│  ├─ packed-refs
+│  └─ refs
+│     ├─ heads
+│     │  └─ main
+│     ├─ remotes
+│     │  └─ origin
+│     │     └─ HEAD
+│     └─ tags
+├─ .gitignore
+├─ .npmrc
+├─ package-lock.json
+├─ package.json
+├─ postcss
+├─ README.md
+├─ src
+│  ├─ app.css
+│  ├─ app.d.ts
+│  ├─ app.html
+│  ├─ lib
+│  │  ├─ Carousel.svelte
+│  │  └─ index.ts
+│  └─ routes
+│     ├─ +layout.svelte
+│     ├─ +page.svelte
+│     ├─ customize
+│     │  └─ +page.svelte
+│     ├─ order-summary
+│     │  └─ +page.svelte
+│     └─ thank-your
+│        └─ +page.svelte
+├─ static
+│  ├─ favicon.png
+│  ├─ icons
+│  │  ├─ message.svg
+│  │  ├─ palette.svg
+│  │  └─ shipping.svg
+│  └─ images
+│     ├─ palette.jpg
+│     └─ tomato-icon.png
+├─ svelte.config.js
+├─ tailwind.config.js
+├─ tsconfig.json
+└─ vite.config.ts
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

@@ -1,6 +1,15 @@
-<script lang="ts">
+<script>
     import { onMount, tick } from 'svelte';
     import { fade, fly } from 'svelte/transition';
+    import Carousel from '$lib/Carousel.svelte';
+
+    const images = [
+      "/images/tomato-icon.png",
+      "/images/tomato-icon.png",
+      "/images/tomato-icon.png",
+      "/images/tomato-icon.png",
+      "/images/tomato-icon.png"
+    ];
   
     let showHero = false;
     let showFeatures = false;
@@ -67,9 +76,6 @@
           <p>Send personalized, colorful tomatoes with your message to anyone, anywhere!</p>
           <button on:click={scrollToCustomize} class="cta-button">Create Your Tomato</button>
         </div>
-        <div class="hero-image">
-          <img src="/images/hero-tomatoes.jpg" alt="Colorful custom tomatoes" />
-        </div>
       </section>
     {/if}
   
@@ -121,18 +127,22 @@
     <section class="testimonials">
         <h2>What Our Customers Say</h2>
         <div class="testimonial-carousel">
-          <!-- TODO: add testimonial carousel with nice messages from real humans -->
+          <!-- TODO: fix carousel and fill it with example texts -->
+
+          <Carousel {images} />
+
         </div>
       </section>
     
       <section id="customize-section" class="cta-section">
-        <h2>Ready to Surprise Someone?</h2>
+        <h2 class="cta-header">Ready to Surprise Someone?</h2>
         <p class="cta-message">Create your custom tomato message today!</p>
         <a href="/customize" class="cta-button">Start Customizing</a>
       </section>
 </main>
   
-<style>
+<style lang="postcss">
+
     :global(html), :global(body) {
         margin: 0;
         padding: 0;
@@ -150,7 +160,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 6rem 2rem;
+        padding: 16rem 2rem;
         background: linear-gradient(135deg, #ff6b6b, #feca57);
         color: white;
         overflow: hidden;
@@ -180,7 +190,7 @@
         }
     }
   
-    .hero-content, .hero-image {
+    .hero-content {
       position: relative;
       z-index: 1;
     }
@@ -198,21 +208,15 @@
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
-  
-    .hero-image {
-      flex: 1;
-      text-align: center;
-    }
-  
-    .hero-image img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
 
     .features, .how-it-works, .testimonials, .cta-section {
       padding: 4rem 2rem;
       text-align: center;
+    }
+
+    .cta-header {
+      font-weight: 800;
+      font-size: 42px;
     }
   
     .cta-button {
@@ -234,7 +238,7 @@
       padding: 4rem 2rem;
       text-align: center;
     }
-  
+    
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -249,11 +253,11 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
-  
+    
     .feature-item:hover {
       transform: translateY(-5px);
     }
-  
+    
     .feature-item img {
       width: 64px;
       height: 64px;
@@ -265,7 +269,7 @@
       justify-content: space-around;
       margin-top: 2rem;
     }
-  
+    
     .step {
       display: flex;
       flex-direction: column;
@@ -284,8 +288,9 @@
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
-
+    
     .cta-message {
         margin-bottom: 60px;
+        font-size: 22px;
     }
-</style>
+  </style>
