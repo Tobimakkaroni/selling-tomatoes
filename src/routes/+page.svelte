@@ -1,7 +1,7 @@
 <script>
-    import { onMount, tick } from 'svelte';
-    import { fade, fly } from 'svelte/transition';
-    import Carousel from '$lib/Carousel.svelte';
+  import { onMount, tick } from 'svelte';
+  import { fade, fly } from 'svelte/transition';
+  import Carousel from '$lib/Carousel.svelte';
   import Navbar from '$lib/Navbar.svelte';
   import Footer from '$lib/Footer.svelte';
 
@@ -133,7 +133,7 @@
         <div class="testimonial-carousel">
           <!-- TODO: fix carousel and fill it with example texts -->
 
-          <Carousel {images} />
+          <Carousel images={images} />
 
         </div>
       </section>
