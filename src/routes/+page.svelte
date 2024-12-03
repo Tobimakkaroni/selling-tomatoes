@@ -5,11 +5,13 @@
   import Navbar from '$lib/Navbar.svelte';
   import Footer from '$lib/Footer.svelte';
 
+  export const data = {};
+
     const images = [
       "/images/tomato-icon.png",
       "/images/tomato-icon.png",
       "/images/tomato-icon.png",
-      "/images/tomato-icon.png",
+      "/images/tomato-icon.png",  
       "/images/tomato-icon.png"
     ];
   
@@ -35,11 +37,11 @@
         if (!container) {
           console.error('Container not found');
           return;
-      }
+        }
 
       const tomatoCount = 50;
-      const maxtomatoesize = 50;
-      const mintomatoesize = 20;
+      const maxtomatoesize = 200;
+      const mintomatoesize = 100;
 
       function createTomato() {
         if (!container) return;
@@ -180,7 +182,6 @@
 
     :global(.tomato) {
         position: absolute;
-        opacity: 0.7;
         animation: fall linear infinite;
     }
 

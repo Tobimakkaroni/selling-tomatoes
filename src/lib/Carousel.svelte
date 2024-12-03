@@ -12,7 +12,7 @@
       data-twe-carousel-item
       data-twe-carousel-active>
       <img
-        src="/images/reviews/review1.png"
+        src="/images/reviews/betterreview1.png"
         class="block w-2/4 rounded-lg"
         alt="Wild Landscape" />
     </div>
@@ -21,7 +21,7 @@
       class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
       data-twe-carousel-item>
       <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+        src="/images/reviews/betterreview2.png"
         class="block w-full"
         alt="Camera" />
     </div>
@@ -30,7 +30,7 @@
       class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
       data-twe-carousel-item>
       <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+        src="/images/reviews/betterreview3.png"
         class="block w-full"
         alt="Exotic Fruits" />
     </div>
