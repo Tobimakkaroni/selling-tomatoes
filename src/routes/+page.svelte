@@ -85,7 +85,7 @@
   
     {#if showFeatures}
       <section class="features" in:fly={{ y: 50, duration: 1000 }}>
-        <h2>Why Choose Our Custom tomatoes?</h2>
+        <h2 class="features-header">Why Choose Our Custom tomatoes?</h2>
         <div class="feature-grid">
           <div class="feature-item">
             <img src="/icons/palette.svg" alt="Color palette" />
@@ -106,8 +106,16 @@
       </section>
     {/if}
   
+    <section class="testimonials">
+      <h2 class="testimonial-header">What Our Customers Say</h2>
+      <div class="testimonial-carousel">
+        <!-- TODO: fix carousel and fill it with example texts -->
+        <Carousel />
+      </div>
+    </section>
+
     <section class="how-it-works">
-      <h2>How It Works</h2>
+      <h2 class="how-it-works-header">How It Works</h2>
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
@@ -127,21 +135,13 @@
         </div>
       </div>
     </section>
-  
-    <section class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial-carousel">
-          <!-- TODO: fix carousel and fill it with example texts -->
-
-          <Carousel images={images} />
-
-        </div>
-      </section>
     
       <section id="customize-section" class="cta-section">
-        <h2 class="cta-header">Ready to Surprise Someone?</h2>
-        <p class="cta-message">Create your custom tomato message today!</p>
-        <a href="/customize" class="cta-button">Start Customizing</a>
+        <div class="cta-card">
+          <h2 class="cta-header">Ready to Surprise Someone?</h2>
+          <p class="cta-message">Create your custom tomato message today!</p>
+          <a href="/customize" class="cta-button">Start Customizing</a>
+        </div>
       </section>
 
       <Footer />
@@ -220,6 +220,52 @@
       text-align: center;
     }
 
+    .cta-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #e59a19;
+      opacity: 0.7;
+      background-image: radial-gradient(circle at center center, #ffffff, #e59a19), repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 40px, transparent 80px, transparent 40px);
+      background-blend-mode: multiply;
+    }
+
+    .cta-card {
+      background-color: white;
+      padding: 10%;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 47px -7px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 47px -7px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 47px -7px rgba(0,0,0,0.75);
+    }
+
+    .testimonials {
+      background-color: #477280;
+    }
+
+    .testimonial-header {
+      color: white;
+      font-size: 32px;
+      font-weight: bolder;
+      margin-bottom: 40px;
+    }
+
+    .features-header {
+      color: rgb(0, 0, 0);
+      font-size: 32px;
+      font-weight: bolder;
+      margin-bottom: 40px;
+    }
+
+    .how-it-works-header {
+      color: rgb(0, 0, 0);
+      font-size: 32px;
+      font-weight: bolder;
+      margin-bottom: 40px;
+    }
+
     .cta-header {
       font-weight: 800;
       font-size: 42px;
@@ -228,7 +274,7 @@
     .cta-button {
       padding: 1rem 2rem;
       font-size: 1.2rem;
-      background-color: #4ecdc4;
+      background-color: #000000;
       color: white;
       border: none;
       border-radius: 5px;
@@ -237,7 +283,7 @@
     }
   
     .cta-button:hover {
-      background-color: #45b7aa;
+      background-color: rgb(255, 166, 0) 
     }
   
     .features, .how-it-works {
@@ -265,9 +311,12 @@
     }
     
     .feature-item img {
-      width: 64px;
+      width: 100%;
       height: 64px;
       margin-bottom: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
   
     .steps {
@@ -299,4 +348,5 @@
         margin-bottom: 60px;
         font-size: 22px;
     }
+
   </style>
