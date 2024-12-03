@@ -24,49 +24,46 @@
     });
   
     function scrollToCustomize() {
-      const element = document.getElementById('customize-section');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const element = document.getElementById('customize-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
-    }
-  
-    function createFallingTomatoes() {
+    
+      function createFallingTomatoes() {
         const container = document.querySelector('.falling-tomatoes');
         if (!container) {
-            console.error('Container not found');
-            return;
-        }
+          console.error('Container not found');
+          return;
+      }
 
-        const tomatoCount = 10;
-        const maxtomatoesize = 50;
-        const mintomatoesize = 20;
+      const tomatoCount = 50;
+      const maxtomatoesize = 50;
+      const mintomatoesize = 20;
 
-        function createTomato() {
-            if (!container) return;
+      function createTomato() {
+        if (!container) return;
+        const tomato = document.createElement('img');
+        tomato.src = '/images/tomato-icon.png';
+        tomato.alt = 'Falling tomato';
+        tomato.classList.add('tomato');
+        tomato.style.left = `${Math.random() * 100}%`;
+        tomato.style.width = `${Math.random() * (maxtomatoesize - mintomatoesize) + mintomatoesize}px`;
+        tomato.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        container.appendChild(tomato);
 
-            const tomato = document.createElement('img');
-            tomato.src = '/images/tomato-icon.png';
-            tomato.alt = 'Falling tomato';
-            tomato.classList.add('tomato');
-            tomato.style.left = `${Math.random() * 100}%`;
-            tomato.style.width = `${Math.random() * (maxtomatoesize - mintomatoesize) + mintomatoesize}px`;
-            tomato.style.animationDuration = `${Math.random() * 3 + 2}s`;
-
-            container.appendChild(tomato);
-
-            tomato.addEventListener('animationend', () => {
-                if (container.contains(tomato)) {
-                    container.removeChild(tomato);
-                }
-            });
-        }
-
-        for (let i = 0; i < tomatoCount; i++) {
+        tomato.addEventListener('animationend', () => {
+          if (container.contains(tomato)) {
+            container.removeChild(tomato);
             createTomato();
-        }
+          }
+        });
+      }
 
-        setInterval(createTomato, 500);
-    }
+      for (let i = 0; i < tomatoCount; i++) {
+        createTomato();
+      }
+}
 </script>
   
 <main>
@@ -274,16 +271,17 @@
     .cta-button {
       padding: 1rem 2rem;
       font-size: 1.2rem;
-      background-color: #000000;
+      background-color: #ff0000;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
     }
   
     .cta-button:hover {
-      background-color: rgb(255, 166, 0) 
+      background-color: rgb(255, 166, 0);
     }
   
     .features, .how-it-works {
