@@ -169,6 +169,7 @@
         background: linear-gradient(135deg, #ff6b6b, #feca57);
         color: white;
         overflow: hidden;
+        height: 100vh;
     }
   
     .falling-tomatoes {
@@ -225,7 +226,6 @@
       align-items: center;
       height: 100vh;
       background-color: #e59a19;
-      opacity: 0.7;
       background-image: radial-gradient(circle at center center, #ffffff, #e59a19), repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 40px, transparent 80px, transparent 40px);
       background-blend-mode: multiply;
     }
